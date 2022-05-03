@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff: 'Roboto', sans-serif;
+  --fc: hsla(240, 6%, 21%, 1);
+  --bg: hsla(0, 0%, 100%, 1);
+  --bg-2: hsla(194, 97%, 31%, 0.1);
+  --card: hsla(240, 9%, 89%, 1);
+  --card-selec: hsla(194, 97%, 31%, 1);
+}
+
+body {
+  background: var(--bg);
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font: 12.6rem/14.7rem var(--ff);
+}
+
+div.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: var(--bg-2);
+
+  border-radius: 4rem;
+  padding: 2.4rem;
+  width: min(87.1rem, 64%);
+}
+
+.timer {
+  display: grid;
+}
+
+span {
+  display:  table-cell;
+}
+
+.controler {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+svg {
+  width: 4.8rem;
+  height: 4.8rem;
+  cursor: pointer;
+}
+
+svg path {
+  fill: var(--fc);
+}
+
+svg:active > path {
+  fill: var(--card-selec);
+}
+
+.hide {
+  display: none;
+}
+
+.sounds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+} 
+
+.card {
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 2.4rem;
+
+  background: var(--card);
+  cursor: pointer;
+}
+
+.card.on {
+  background: var(--card-selec);
+}
+
+.card svg.on path {
+  fill: var(--bg);
+}
+
+@media (max-width: 1080px) {
+
+  body {
+    font-size: clamp(9.6rem, 9.6rem + 15vw, 12.6rem);
+    text-align: center;
+  }
+
+  div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+  
+    background: var(--bg-2);
+  
+    border-radius: 4rem;
+    padding: 2.4rem;
+    width: min(36.7rem, 90%);
+  }
+
+  .time {
+    display:flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .controler {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+}
+
+@media (max-width: 410px) {
+  
+  body {
+    margin-inline: auto;
+    font-size: 9rem
+  }
+  
+  div.container {
+    width: 100vw;
+    background: none;
+  }
+
+  div.timer {
+    margin-inline: auto;
+  }
+
+  .controler {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .sounds {
+    width: 90%;
+    gap: 1.6rem;
+    margin-inline: auto;
+  } 
+
+  .card {
+    width: 11.04rem;
+    height: 12.16rem;
+    border-radius: 2rem;
+  }
+
+}
