@@ -1,5 +1,6 @@
 import { 
     buttonPlay,
+    buttonPause,
     buttonStop,
     buttonPlus,
     buttonLess,
@@ -45,11 +46,19 @@ export default function ({ controler, timer, sounds }) {
     buttonPlay.addEventListener('click', () => {
         sounds.pressButton()
         timer.countdown()
+        controler.play()
     })
 
+    buttonPause.addEventListener('click', () => {
+        sounds.pressButton()
+        controler.play()
+        timer.hold()
+    })
+    
     buttonStop.addEventListener('click', () => {
         sounds.pressButton()
         timer.reset()
+        controler.stop()
     })
 
     buttonPlus.addEventListener('click', () => {

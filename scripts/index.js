@@ -4,6 +4,7 @@ import Events from './events.js'
 import Controler from './controler.js'
 import { 
     buttonPlay,
+    buttonPause,
     buttonStop,
     buttonPlus,
     buttonLess,
@@ -30,6 +31,7 @@ const timer = Timer({
 
 const controler = Controler({
     buttonPlay,
+    buttonPause,
     buttonStop,
     buttonPlus,
     buttonLess,

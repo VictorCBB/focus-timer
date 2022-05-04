@@ -38,22 +38,27 @@ export default function({
             }
 
             updateDisplay(minutes, String(seconds -1))
-
+            
             countdown()
-
+            
         }, 1000)
-
+        
     }
-
+        
     function updateMinutes(newMinutes) {
         minutes = newMinutes
+    }
+
+    function hold() {
+        clearTimeout(timerTimeout)
     }
 
     return {
         countdown,
         reset,
         updateDisplay,
-        updateMinutes
+        updateMinutes,
+        hold
     }
 
 }

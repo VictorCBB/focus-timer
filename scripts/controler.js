@@ -1,6 +1,6 @@
-import sounds from "./sounds.js"
-
 export default function({
+    buttonPlay,
+    buttonPause,
     buttonForest,
     buttonRain,
     buttonVoices,
@@ -11,6 +11,21 @@ export default function({
     iconFlame,
     minutesDisplay
 }) {
+    function play() {
+        buttonPlay.classList.add("hide")
+        buttonPause.classList.remove("hide")
+    }
+
+    function pause() {
+        buttonPlay.classList.remove("hide")
+        buttonPause.classList.add("hide")
+    }
+
+    function stop() {
+        buttonPlay.classList.remove("hide")
+        buttonPause.classList.add("hide")
+    }
+
     function playPauseForest() {
         buttonForest.classList.toggle("on")
         buttonRain.classList.remove("on")
@@ -77,6 +92,9 @@ export default function({
     }
     
     return {
+        play,
+        pause,
+        stop,
         playPauseForest,
         playPauseRain,
         playPauseVoices,
