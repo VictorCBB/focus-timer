@@ -13,6 +13,16 @@ const iconVoices = document.querySelector(".voices > svg")
 const iconFlame = document.querySelector(".flame > svg")
 const minutesDisplay = document.querySelector(".minutes")
 const secondsDisplay = document.querySelector(".seconds")
+const buttonLight = document.querySelector(".light-mode")
+const buttonDark = document.querySelector(".dark-mode")
+const body = document.querySelector("body")
+const buttons = document.querySelectorAll(".container svg")
+const numbers = document.querySelectorAll("span")
+const volForest = document.getElementById("volume-forest")
+const volRain = document.getElementById("volume-rain") 
+const volVoices = document.getElementById("volume-voices") 
+const volFlame = document.getElementById("volume-flame") 
+const volBar = document.querySelectorAll("input")
 
 export {
     buttonPlay,
@@ -29,5 +39,15 @@ export {
     iconVoices,
     iconFlame,
     minutesDisplay,
-    secondsDisplay
+    secondsDisplay,
+    buttonLight,
+    buttonDark,
+    body,
+    buttons,
+    numbers,
+    volForest,
+    volRain,
+    volVoices,
+    volFlame,
+    volBar
 }

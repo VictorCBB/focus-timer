@@ -17,7 +17,17 @@ import {
     iconVoices,
     iconFlame,
     minutesDisplay,
-    secondsDisplay
+    secondsDisplay,
+    buttonLight,
+    buttonDark,
+    body,
+    buttons,
+    numbers,
+    volForest,
+    volRain,
+    volVoices,
+    volFlame,
+    volBar
 } from './elements.js'
 
 const timer = Timer({
@@ -44,6 +54,12 @@ const controler = Controler({
     iconVoices,
     iconFlame,
     minutesDisplay,
+    buttonLight,
+    buttonDark,
+    body,
+    buttons,
+    numbers,
+    volBar
 })
 
 const sounds = Sounds({

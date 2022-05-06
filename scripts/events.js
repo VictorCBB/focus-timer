@@ -7,7 +7,13 @@ import {
     buttonForest,
     buttonRain,
     buttonVoices,
-    buttonFlame
+    buttonFlame,
+    buttonLight,
+    buttonDark,
+    volForest,
+    volRain,
+    volVoices,
+    volFlame 
 } from "./elements.js"
 
 export default function ({ controler, timer, sounds }) {
@@ -75,6 +81,34 @@ export default function ({ controler, timer, sounds }) {
         timer.updateMinutes(newMinutes)
         sounds.pressButton()
         timer.reset()
+    })
+
+    buttonLight.addEventListener("click", () => {
+        controler.darkMode()
+    })
+    
+    buttonDark.addEventListener("click", () => {
+        controler.lightMode()
+    })
+
+    volForest.addEventListener("change", () => {
+        sounds.rangeForest()
+        controler.rangeForest()
+    })
+    
+    volRain.addEventListener("change", () => {
+        sounds.rangeRain()
+        controler.rangeRain()
+    })
+    
+    volVoices.addEventListener("change", () => {
+        sounds.rangeVoices()
+        controler.rangeVoices()
+    })
+    
+    volFlame.addEventListener("change", () => {
+        sounds.rangeFlame()
+        controler.rangeFlame()
     })
 
 }
